@@ -14,7 +14,7 @@ export class AddTodo extends React.Component{
         var newTodo = this.refs.todoText.value
         if(newTodo.length > 0){
 			this.refs.todoText.value = '';
-			dispatch(actions.addTodo(newTodo))
+			dispatch(actions.startAddTodo(newTodo))
 		}else{
             this.refs.todoText.focus()
         }
