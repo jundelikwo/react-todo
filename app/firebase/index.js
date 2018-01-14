@@ -32,8 +32,12 @@ import firebase from 'firebase'
 
 if(process.env.NODE_ENV === 'test'){
     var config = require('config/test')
-}else{
+}else if(process.env.NODE_ENV === 'development'){
     var config = require('config/development')
+}else{
+    var config = {
+        ...process.env
+    }
 }
 
 try {
