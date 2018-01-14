@@ -32,15 +32,13 @@ import firebase from 'firebase'
 
 if(process.env.NODE_ENV === 'test'){
     var config = require('config/test')
-}else if(process.env.NODE_ENV === 'development'){
+}else /*if(process.env.NODE_ENV === 'development')*/{
     var config = require('config/development')
-    console.log('Env',config)
-}else{
+}/*else{
     var config = {
         ...process.env
     }
-    console.log('config',process)
-}
+}*/
 
 try {
     // Initialize Firebase
@@ -58,5 +56,6 @@ try {
 
 }
 
+export var githubProvider = new firebase.auth.GithubAuthProvider()
 export var firebaseRef = firebase.database().ref()
 export default firebase
