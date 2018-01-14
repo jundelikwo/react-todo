@@ -39,7 +39,7 @@ if(process.env.NODE_ENV === 'test'){
     var config = {
         ...process.env
     }
-    console.log('config',config)
+    console.log('config',process)
 }
 
 try {
