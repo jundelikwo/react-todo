@@ -8,6 +8,32 @@ describe('Reducers',()=>{
         expect(reducers).toExist()
     })
 
+    describe('authReducer',()=>{
+        it('should set uid on login',()=>{
+            var action = {
+                type: 'LOGIN',
+                uid: '123abc'
+            }
+            var res = reducers.authReducer(df({}),df(action))
+
+            expect(res).toEqual({
+                uid: action.uid
+            })
+        })
+
+        it('should unset uid on logout',()=>{
+            var action = {
+                type: 'LOGOUT'
+            }
+            var authData = {
+                uid: '123abc'
+            }
+            var res = reducers.authReducer(df(authData),df(action))
+
+            expect(res).toEqual({})
+        })
+    })
+
     describe('searchTextReducer',()=>{
         it('should set searchText',()=>{
             var action = {
