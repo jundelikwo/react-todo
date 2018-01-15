@@ -37,7 +37,8 @@
 //                 DATABASE_URL: JSON.stringify(process.env.DATABASE_URL),
 //                 PROJECTID: JSON.stringify(process.env.PROJECTID),
 //                 STORAGE_BUCKET: JSON.stringify(process.env.STORAGE_BUCKET),
-//                 MESSAGINGSENDERID: JSON.stringify(process.env.MESSAGINGSENDERID)
+//                 MESSAGINGSENDERID: JSON.stringify(process.env.MESSAGINGSENDERID),
+//                 GITHUB_ACCESS_TOKEN: JSON.stringify(process.env.GITHUB_ACCESS_TOKEN)
 //             }
 //         })
 //     ],
